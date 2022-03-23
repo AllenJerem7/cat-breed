@@ -1,5 +1,7 @@
 <app-dashboard
+*ngIf="(catBreeds$ | async).length > 0"
 [catBreeds]="catBreeds$ | async"
-[loading]="loading$| async"
 [cols]="cols"
 ></app-dashboard>
+
+<p-progressSpinner *ngIf="(loading$ | async)"></p-progressSpinner>

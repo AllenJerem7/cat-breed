@@ -1,10 +1,10 @@
-<p-table #dt1 [value]="catBreeds" [paginator]="true" [rows]="10" [globalFilterFields]="['name']">
+<p-table #dt1 [value]="catBreeds" [paginator]="true" [rows]="10" [globalFilterFields]="['name', 'origin']">
     <ng-template pTemplate="caption">
         <div class="flex">
             <button pButton label="Clear" class="p-button-outlined" icon="pi pi-filter-slash" (click)="clear(dt1)"></button>
             <span class="p-input-icon-left ml-auto">
                 <i class="pi pi-search"></i>
-                <input pInputText type="text" (input)="dt1.filterGlobal($event.target.value, 'contains')" placeholder="Search by Name" />
+                <input pInputText type="text" (input)="dt1.filterGlobal($event.target.value, 'contains')" placeholder="Search by Name, Origin" />
             </span>
         </div>
     </ng-template>

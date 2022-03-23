@@ -3,8 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { DashboardContainerComponent } from './containers/dashboard-container/dashboard-container.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'tutorials', pathMatch: 'full' },
-  { path: 'dashboard', component: DashboardContainerComponent }
+  { path: '', component: DashboardContainerComponent }
 ];
 
 @NgModule({

@@ -14,9 +14,6 @@ export class DashboardComponent implements OnInit {
   catBreeds: CatBreeds[];
 
   @Input()
-  loading: boolean;
-
-  @Input()
   cols: any[];
 
   constructor() { }
