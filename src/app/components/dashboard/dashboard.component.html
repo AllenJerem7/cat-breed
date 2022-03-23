@@ -22,7 +22,11 @@
                  {{catBreed[col.field]}}
                 </span>
                 <span *ngIf="col.field === 'image'">
-                <img src="{{catBreed[col.field]?.url}}" alt="{{catBreed[col.field]?.name}}" class="cat-images">
+                    <div class="circular">
+                        <img src="{{catBreed[col.field]?.url}}" alt="{{catBreed[col.field]?.name}}" class="cat-images"
+                        onerror="this.src='http://placehold.jp/757575/ffffff/150x150.png?text=No%20image';"
+                        >
+                    </div>
                 </span>
             </td>
         </tr>
